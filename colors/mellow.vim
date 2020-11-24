@@ -122,19 +122,20 @@ endfunction
 if &background ==# 'light'
     " -------- group ------------ bg--------- fg ------- special -------
     exe s:hi('Comment',         'NONE',     14)
-    exe s:hi('Constant',        'NONE',     0)
+    exe s:hi('Constant',        'NONE',     5)
     exe s:hi('Cursor',          0,          15)
     exe s:hi('CursorLine',      7,          'NONE')
-    exe s:hi('CursorLineNr',    7,          6,          'bold')
+    exe s:hi('CursorLineNr',    11,         13,         'bold')
     exe s:hi('DiffAdd',         10,         'NONE')
-    exe s:hi('DiffChange',      'NONE',     6)
-    exe s:hi('DiffDelete',      'NONE',     9,          'bold')
-    exe s:hi('EndOfBuffer',     7,          12)
+    exe s:hi('DiffDelete',      'NONE',     1,          'bold')
+    exe s:hi('DiffText',        9,          'NONE')
+    exe s:hi('Directory',       'NONE',     6)
     exe s:hi('ErrorMsg',        1,          15)
+    exe s:hi('FoldColumn',      3,          4)
     exe s:hi('Function',        'NONE',     5)
     exe s:hi('Identifier',      'NONE',     13)
     exe s:hi('Ignore',          'NONE',     'NONE')
-    exe s:hi('IncSearch',       11,         0)
+    exe s:hi('IncSearch',       14,         0)
     exe s:hi('LineNr',          7,          14)
     exe s:hi('ModeMsg',         'NONE',     6,          'bold')
     exe s:hi('MoreMsg',         'NONE',     3,          'bold')
@@ -143,6 +144,8 @@ if &background ==# 'light'
     exe s:hi('Pmenu',           7,          3)
     exe s:hi('PmenuSel',        11,         6)
     exe s:hi('PmenuThumb',      13,         11)
+    exe s:hi('Search',          11,         0)
+    exe s:hi('SignColumn',      11,         'NONE')
     exe s:hi('Special',         'NONE',     12)
     exe s:hi('SpellBad',        15,         1,          'underline', 9)
     exe s:hi('SpellCap',        15,         4,          'underline', 12)
@@ -152,9 +155,9 @@ if &background ==# 'light'
     exe s:hi('StatusLine',      11,         13,         'bold')
     exe s:hi('StatusLineNC',    7,          3,          'bold,underline')
     exe s:hi('String',          'NONE',     4)
-    exe s:hi('Todo',            'NONE',     12,         'bold')
+    exe s:hi('Todo',            'NONE',     10,         'bold')
     exe s:hi('Underlined',      'NONE',     'NONE',     'underline')
-    exe s:hi('VertSplit',       7,          3,          'bold')
+    exe s:hi('VertSplit',       3,          5,          'bold')
     exe s:hi('Visual',          11,         'NONE')
     exe s:hi('WildMenu',        7,          6)
 
@@ -166,14 +169,15 @@ else
     exe s:hi('CursorLine',      8,          'NONE')
     exe s:hi('CursorLineNr',    8,          14,         'bold')
     exe s:hi('DiffAdd',         2,          'NONE')
-    exe s:hi('DiffChange',      'NONE',     14)
-    exe s:hi('DiffDelete',      'NONE',     9,          'bold')
-    exe s:hi('EndOfBuffer',     8,          12)
+    exe s:hi('DiffDelete',      'NONE',     1,          'bold')
+    exe s:hi('DiffText',        9,          'NONE')
+    exe s:hi('Directory',       'NONE',     14)
     exe s:hi('ErrorMsg',        1,          15)
+    exe s:hi('FoldColumn',      3,          4)
     exe s:hi('Function',        'NONE',     3)
     exe s:hi('Identifier',      'NONE',     11)
     exe s:hi('Ignore',          'NONE',     'NONE')
-    exe s:hi('IncSearch',       5,          15)
+    exe s:hi('IncSearch',       13,         15)
     exe s:hi('LineNr',          8,          13)
     exe s:hi('ModeMsg',         'NONE',     14,         'bold')
     exe s:hi('MoreMsg',         'NONE',     3,          'bold')
@@ -182,6 +186,8 @@ else
     exe s:hi('Pmenu',           8,          13)
     exe s:hi('PmenuSel',        5,          9)
     exe s:hi('PmenuThumb',      13,         5)
+    exe s:hi('Search',          5,          15)
+    exe s:hi('SignColumn',      8,          'NONE')
     exe s:hi('Special',         'NONE',     12)
     exe s:hi('SpellBad',        0,          1,          'underline', 9)
     exe s:hi('SpellCap',        0,          7,          'underline', 12)
@@ -191,7 +197,7 @@ else
     exe s:hi('StatusLine',      5,          11,         'bold')
     exe s:hi('StatusLineNC',    8,          13,         'bold,underline')
     exe s:hi('String',          'NONE',     7)
-    exe s:hi('Todo',            'NONE',     12,         'bold')
+    exe s:hi('Todo',            'NONE',     10,         'bold')
     exe s:hi('Underlined',      'NONE',     'NONE',     'underline')
     exe s:hi('VertSplit',       8,          13,         'bold')
     exe s:hi('Visual',          5,          'NONE')
@@ -202,21 +208,19 @@ endif
 
 hi! link ColorColumn CursorLine
 hi! link Error DiffDelete
+hi! link EndOfBuffer Normal
 hi! link Conceal Special
 hi! link CursorColumn CursorLine
 hi! link CursorIM Cursor
-hi! link DiffText Visual
+hi! link DiffChange Visual
 hi! link Directory DiffChange
-hi! link FoldColumn EndOfBuffer
-hi! link Folded EndOfBuffer
+hi! link Folded CursorLine
 hi! link MatchParen PmenuSel
 hi! link Number Constant
 hi! link PmenuSbar Pmenu
 hi! link PreProc Identifier
 hi! link Question ModeMsg
 hi! link QuickFixLine Underlined
-hi! link Search IncSearch
-hi! link SignColumn CursorLine
 hi! link SpecialKey Special
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
@@ -228,8 +232,8 @@ hi! link Title Ignore
 hi! link Type Function
 hi! link VisualNOS Error
 hi! link WarningMsg Error
-hi! link helpLeadBlank StatusLineNC
-hi! link helpNormal StatusLineNC
+hi! link helpLeadBlank Normal
+hi! link helpNormal Normal
 
 " Set terminal colors. {{{1
 
