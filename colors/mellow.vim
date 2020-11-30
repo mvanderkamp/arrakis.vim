@@ -213,7 +213,6 @@ hi! link Conceal Special
 hi! link CursorColumn CursorLine
 hi! link CursorIM Cursor
 hi! link DiffChange Visual
-hi! link Directory DiffChange
 hi! link Folded CursorLine
 hi! link MatchParen PmenuSel
 hi! link Number Constant
