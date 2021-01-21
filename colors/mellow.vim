@@ -49,7 +49,7 @@ if &background ==# 'light'
                 \ '#FF7477',
                 \ '#A4BF40',
                 \ '#F5BB89',
-                \ '#8A7B85',
+                \ '#AA9BA5',
                 \ '#8A4B53',
                 \ '#D47D49',
                 \ '#F2DDBC',
