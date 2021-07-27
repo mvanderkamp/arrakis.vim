@@ -146,7 +146,7 @@ if &background ==# 'light'
     exe s:hi('Pmenu',        11,          0)
     exe s:hi('PmenuSel',     10,          8)
     exe s:hi('PmenuThumb',   2,           0)
-    exe s:hi('Search',       12,          'None')
+    exe s:hi('Search',       12,          'NONE')
     exe s:hi('SignColumn',   11,          'NONE')
     exe s:hi('Special',      'NONE',      3)
     exe s:hi('SpellBad',     15,          1,          'underline', 9)
