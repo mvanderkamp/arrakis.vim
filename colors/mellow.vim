@@ -120,50 +120,55 @@ endfunction
 " Set main colors. {{{1
 
 if &background ==# 'light'
-    " -------- group ------------ bg--------- fg ------- special -------
-    exe s:hi('Comment',         'NONE',     14)
-    exe s:hi('Constant',        'NONE',     6)
-    exe s:hi('Cursor',          0,          15)
-    exe s:hi('CursorLine',      7,          'NONE')
-    exe s:hi('CursorLineNr',    11,         13,         'bold')
-    exe s:hi('DiffAdd',         10,         'NONE')
-    exe s:hi('DiffDelete',      'NONE',     1,          'bold')
-    exe s:hi('DiffText',        9,          'NONE')
-    exe s:hi('Directory',       'NONE',     6)
-    exe s:hi('ErrorMsg',        1,          15)
-    exe s:hi('FoldColumn',      14,         13)
-    exe s:hi('Function',        'NONE',     5)
-    exe s:hi('Identifier',      'NONE',     13)
-    exe s:hi('Ignore',          'NONE',     'NONE')
-    exe s:hi('IncSearch',       14,         0)
-    exe s:hi('LineNr',          7,          14)
-    exe s:hi('ModeMsg',         'NONE',     6,          'bold')
-    exe s:hi('MoreMsg',         15,         3,          'bold')
-    exe s:hi('NonText',         15,         10)
-    exe s:hi('Normal',          15,         0)
-    exe s:hi('Pmenu',           7,          3)
-    exe s:hi('PmenuSel',        11,         6)
-    exe s:hi('PmenuThumb',      13,         11)
-    exe s:hi('Search',          11,         0)
-    exe s:hi('SignColumn',      11,         'NONE')
-    exe s:hi('Special',         'NONE',     12)
-    exe s:hi('SpellBad',        15,         1,          'underline', 9)
-    exe s:hi('SpellCap',        15,         4,          'underline', 12)
-    exe s:hi('SpellLocal',      15,         6,          'underline', 14)
-    exe s:hi('SpellRare',       15,         3,          'underline', 11)
-    exe s:hi('Statement',       'NONE',     1)
-    exe s:hi('StatusLine',      11,         13,         'bold')
-    exe s:hi('StatusLineNC',    7,          14,         'bold,underline')
-    exe s:hi('String',          'NONE',     4)
-    exe s:hi('Todo',            10,         12,         'bold')
-    exe s:hi('Underlined',      'NONE',     'NONE',     'underline')
-    exe s:hi('VertSplit',       3,          5,          'bold')
-    exe s:hi('Visual',          11,         'NONE')
-    exe s:hi('WildMenu',        7,          6)
+    "   group--------------  bg---------- fg--------- special-------
+    exe s:hi('Comment',      'NONE',      2)
+    exe s:hi('Constant',     'NONE',      6)
+    exe s:hi('Cursor',       0,           15)
+    exe s:hi('CursorLine',   7,           'NONE')
+    exe s:hi('CursorLineNr', 11,          13,         'bold')
+    exe s:hi('DiffAdd',      10,          'NONE')
+    exe s:hi('DiffChange',   11,          'NONE')
+    exe s:hi('DiffDelete',   7,           15,         'bold,reverse')
+    exe s:hi('DiffText',     9,           'NONE',     'underline')
+    exe s:hi('Directory',    'NONE',      6)
+    exe s:hi('Error',        1,           15,         'bold,reverse')
+    exe s:hi('ErrorMsg',     1,           15)
+    exe s:hi('Folded',       7,           13)
+    exe s:hi('FoldColumn',   14,          13)
+    exe s:hi('Function',     'NONE',      5)
+    exe s:hi('Identifier',   'NONE',      13)
+    exe s:hi('Ignore',       'NONE',      'NONE')
+    exe s:hi('LineNr',       7,           14)
+    exe s:hi('ModeMsg',      'NONE',      6,          'bold')
+    exe s:hi('MoreMsg',      3,           15,         'bold,reverse')
+    exe s:hi('NonText',      15,          10)
+    exe s:hi('Normal',       15,          0)
+    exe s:hi('Pmenu',        11,          0)
+    exe s:hi('PmenuSel',     10,          8)
+    exe s:hi('PmenuThumb',   2,           0)
+    exe s:hi('Search',       12,          'None')
+    exe s:hi('SignColumn',   11,          'NONE')
+    exe s:hi('Special',      'NONE',      3)
+    exe s:hi('SpellBad',     15,          1,          'underline', 9)
+    exe s:hi('SpellCap',     15,          4,          'underline', 12)
+    exe s:hi('SpellLocal',   15,          6,          'underline', 14)
+    exe s:hi('SpellRare',    15,          3,          'underline', 11)
+    exe s:hi('Statement',    'NONE',      1)
+    exe s:hi('StatusLine',   11,          13,         'bold')
+    exe s:hi('StatusLineNC', 7,           14,         'bold,underline')
+    exe s:hi('String',       'NONE',      4)
+    exe s:hi('Todo',         10,          13,         'bold')
+    exe s:hi('Underlined',   'NONE',      'NONE',     'underline')
+    exe s:hi('VertSplit',    11,          'NONE',     'bold')
+    exe s:hi('Visual',       10,          'NONE')
+    exe s:hi('VisualNOS',    'NONE',      'NONE',     'bold,underline')
 
+    highlight! link IncSearch  DiffText
+    highlight! link SpecialKey DiffDelete
+    highlight! link WildMenu   Visual
 else
     " -------- group ------------ bg--------- fg ------- special -------
-    exe s:hi('Comment',         'NONE',     13)
+    exe s:hi('Comment',         'NONE',     2)
     exe s:hi('Constant',        'NONE',     15)
     exe s:hi('Cursor',          7,          0)
     exe s:hi('CursorLine',      8,          'NONE')
@@ -202,25 +207,27 @@ else
     exe s:hi('VertSplit',       8,          13,         'bold')
     exe s:hi('Visual',          5,          'NONE')
     exe s:hi('WildMenu',        8,          14)
+
+    hi! link Error DiffDelete
+    hi! link DiffChange Visual
+    hi! link Folded CursorLine
+    hi! link VisualNOS Error
+    hi! link SpecialKey Special
 endif
 
 " Set linked groups. {{{1
 
 hi! link ColorColumn CursorLine
-hi! link Error DiffDelete
 hi! link EndOfBuffer Normal
 hi! link Conceal Special
 hi! link CursorColumn CursorLine
 hi! link CursorIM Cursor
-hi! link DiffChange Visual
-hi! link Folded CursorLine
 hi! link MatchParen PmenuSel
 hi! link Number Constant
 hi! link PmenuSbar Pmenu
 hi! link PreProc Identifier
 hi! link Question ModeMsg
 hi! link QuickFixLine Underlined
-hi! link SpecialKey Special
 hi! link StatusLineTerm StatusLine
 hi! link StatusLineTermNC StatusLineNC
 hi! link TabLine StatusLineNC
@@ -229,7 +236,6 @@ hi! link TabLineSel StatusLine
 hi! link Terminal Normal
 hi! link Title Ignore
 hi! link Type Function
-hi! link VisualNOS Error
 hi! link WarningMsg Error
 hi! link helpLeadBlank Normal
 hi! link helpNormal Normal
