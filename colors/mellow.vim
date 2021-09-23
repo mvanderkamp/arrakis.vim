@@ -288,3 +288,5 @@ if s:opt_user_colors
 endif
 
 " }}}
+
+" vim: fdm=marker
