@@ -8,7 +8,7 @@ let s:p = {
             \ 'replace': {},
             \ 'visual': {},
             \ 'tabline': {},
-            \ 'comand': {},
+            \ 'command': {},
             \}
 
 let s:black    = ['#0F0908', 00]
