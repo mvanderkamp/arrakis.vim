@@ -35,6 +35,9 @@ if lightline#colorscheme#background() ==# 'light'
     let s:p.normal.error = [[ s:red, s:bryellow ]]
     let s:p.normal.warning = [[ s:orange, s:bryellow ]]
 
+    let s:p.command.left = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
+    let s:p.command.right = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
+
     let s:p.insert.left = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
     let s:p.insert.right = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
 
@@ -57,6 +60,9 @@ else
     let s:p.normal.middle = [[ s:bryellow, s:yellow ]]
     let s:p.normal.error = [[ s:red, s:yellow ]]
     let s:p.normal.warning = [[ s:orange, s:yellow ]]
+
+    let s:p.command.left = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
+    let s:p.command.right = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
 
     let s:p.insert.left = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
     let s:p.insert.right = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
