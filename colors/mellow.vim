@@ -35,56 +35,44 @@ let s:opt_cterm_ansi = get(g:, s:script_name .. "_cterm_ansi", 0)
 
 " Define color palette. {{{1
 
-if &background ==# 'light'
-    let s:colors = [
-                \ '#0F0908',
-                \ '#AF0032',
-                \ '#4C6E25',
-                \ '#A67458',
-                \ '#573E55',
-                \ '#66292F',
-                \ '#BF472C',
-                \ '#E0CCAE',
-                \ '#3D241F',
-                \ '#FF7477',
-                \ '#A4BF40',
-                \ '#F5BB89',
-                \ '#AA9BA5',
-                \ '#8A4B53',
-                \ '#D47D49',
-                \ '#F2DDBC',
-                \ ]
-    " xterm-256 conversions: https://codegolf.stackexchange.com/a/156985
-    let s:colors_fallback = s:opt_cterm_ansi ? range(16) : [
-                \ 232, 125, 58, 137, 240, 236, 130, 187,
-                \ 235, 210, 107, 216, 102, 95, 173, 223
-                \ ]
+let s:colors = [
+            \ '#0F0908',
+            \ '#97001A',
+            \ '#3C5E15',
+            \ '#865448',
+            \ '#573E55',
+            \ '#66292F',
+            \ '#BF472C',
+            \ '#E0CCAE',
+            \ '#2D140F',
+            \ '#FF9487',
+            \ '#A4BF40',
+            \ '#F5BB89',
+            \ '#CFCAD0',
+            \ '#BA8B93',
+            \ '#D47D49',
+            \ '#F2DDBC',
+            \]
 
-else  " Dark mode.
-    let s:colors = [
-                \ '#0F0908',
-                \ '#AF0032',
-                \ '#577E2A',
-                \ '#BF9169',
-                \ '#896186',
-                \ '#66292F',
-                \ '#BF472C',
-                \ '#D3C1A6',
-                \ '#3D241F',
-                \ '#FF7477',
-                \ '#A4BF40',
-                \ '#F5BB89',
-                \ '#9F939B',
-                \ '#8A4B53',
-                \ '#D47D49',
-                \ '#ECCD9D',
-                \ ]
-    " xterm-256 conversions: https://codegolf.stackexchange.com/a/156985
-    let s:colors_fallback = s:opt_cterm_ansi ? range(16) : [
-                \ 232, 125, 64, 137, 96, 236, 130, 181,
-                \ 235, 210, 107, 216, 247, 95, 173, 223
-                \ ]
-endif
+" xterm-256 conversions: https://codegolf.stackexchange.com/a/156985
+let s:colors_fallback = s:opt_cterm_ansi ? range(16) : [
+            \ 232,
+            \ 125,
+            \ 58,
+            \ 95,
+            \ 240,
+            \ 236,
+            \ 130,
+            \ 187,
+            \ 235,
+            \ 210,
+            \ 107,
+            \ 216,
+            \ 102,
+            \ 95,
+            \ 173,
+            \ 223,
+            \ ]
 
 " Define highlight setter function. {{{1
 
