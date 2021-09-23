@@ -113,19 +113,20 @@ if &background ==# 'light'
     exe s:hi('Constant',     'NONE',      6)
     exe s:hi('Cursor',       0,           15)
     exe s:hi('CursorLine',   7,           'NONE')
-    exe s:hi('CursorLineNr', 11,          13,         'bold')
+    exe s:hi('CursorLineNr', 11,          5)
     exe s:hi('DiffAdd',      10,          'NONE')
     exe s:hi('DiffChange',   11,          'NONE')
-    exe s:hi('DiffDelete',   7,           15,         'bold,reverse')
+    exe s:hi('DiffDelete',   15,          12,         'bold')
     exe s:hi('DiffText',     9,           'NONE',     'underline')
     exe s:hi('Directory',    'NONE',      6)
     exe s:hi('Error',        1,           15,         'bold,reverse')
     exe s:hi('ErrorMsg',     1,           15)
-    exe s:hi('Folded',       7,           13)
-    exe s:hi('FoldColumn',   14,          13)
+    exe s:hi('Folded',       7,           5)
+    exe s:hi('FoldColumn',   14,          11)
     exe s:hi('Function',     'NONE',      5)
-    exe s:hi('Identifier',   'NONE',      13)
+    exe s:hi('Identifier',   'NONE',      4)
     exe s:hi('Ignore',       'NONE',      'NONE')
+    exe s:hi('IncSearch',    9,           0,          'underline')
     exe s:hi('LineNr',       7,           14)
     exe s:hi('ModeMsg',      'NONE',      6,          'bold')
     exe s:hi('MoreMsg',      3,           15,         'bold,reverse')
@@ -133,27 +134,49 @@ if &background ==# 'light'
     exe s:hi('Normal',       15,          0)
     exe s:hi('Pmenu',        11,          0)
     exe s:hi('PmenuSel',     10,          8)
-    exe s:hi('PmenuThumb',   2,           0)
-    exe s:hi('Search',       12,          'NONE')
-    exe s:hi('SignColumn',   11,          'NONE')
+    exe s:hi('PmenuSbar',    3,           8)
+    exe s:hi('Search',       12,          0)
+    exe s:hi('SignColumn',   11,          5)
     exe s:hi('Special',      'NONE',      3)
+    exe s:hi('SpecialKey',   15,          12,         'bold')
     exe s:hi('SpellBad',     15,          1,          'underline', 9)
     exe s:hi('SpellCap',     15,          4,          'underline', 12)
     exe s:hi('SpellLocal',   15,          6,          'underline', 14)
     exe s:hi('SpellRare',    15,          3,          'underline', 11)
     exe s:hi('Statement',    'NONE',      1)
-    exe s:hi('StatusLine',   11,          13,         'bold')
-    exe s:hi('StatusLineNC', 7,           14,         'bold,underline')
+    exe s:hi('StatusLine',   11,          5)
+    exe s:hi('StatusLineNC', 7,           3,          'underline')
     exe s:hi('String',       'NONE',      4)
-    exe s:hi('Todo',         10,          13,         'bold')
+    exe s:hi('Todo',         10,          8,          'bold')
     exe s:hi('Underlined',   'NONE',      'NONE',     'underline')
-    exe s:hi('VertSplit',    11,          'NONE',     'bold')
+    exe s:hi('VertSplit',    11,          6)
     exe s:hi('Visual',       10,          'NONE')
-    exe s:hi('VisualNOS',    'NONE',      'NONE',     'bold,underline')
+    exe s:hi('VisualNOS',    'NONE',      'NONE',     'underline')
 
-    highlight! link IncSearch  DiffText
-    highlight! link SpecialKey DiffDelete
-    highlight! link WildMenu   Visual
+    highlight! link ColorColumn      CursorLine
+    highlight! link Conceal          Special
+    highlight! link CursorColumn     CursorLine
+    highlight! link CursorIM         Cursor
+    highlight! link EndOfBuffer      Normal
+    highlight! link MatchParen       PmenuSel
+    highlight! link Number           Constant
+    highlight! link PmenuThumb       PmenuSel
+    highlight! link PreProc          Identifier
+    highlight! link Question         ModeMsg
+    highlight! link QuickFixLine     Underlined
+    highlight! link StatusLineTerm   StatusLine
+    highlight! link StatusLineTermNC StatusLineNC
+    highlight! link TabLine          StatusLineNC
+    highlight! link TabLineFill      StatusLineNC
+    highlight! link TabLineSel       StatusLine
+    highlight! link Terminal         Normal
+    highlight! link Title            Ignore
+    highlight! link Type             Function
+    highlight! link WarningMsg       Error
+    highlight! link WildMenu         Visual
+    highlight! link helpLeadBlank    Normal
+    highlight! link helpNormal       Normal
+
 else
     " -------- group ------------ bg--------- fg ------- special -------
     exe s:hi('Comment',         'NONE',     2)
@@ -196,37 +219,30 @@ else
     exe s:hi('Visual',          5,          'NONE')
     exe s:hi('WildMenu',        8,          14)
 
-    hi! link Error DiffDelete
-    hi! link DiffChange Visual
-    hi! link Folded CursorLine
-    hi! link VisualNOS Error
-    hi! link SpecialKey Special
+    highlight! link ColorColumn      CursorLine
+    highlight! link Conceal          Special
+    highlight! link CursorColumn     CursorLine
+    highlight! link CursorIM         Cursor
+    highlight! link EndOfBuffer      Normal
+    highlight! link MatchParen       PmenuSel
+    highlight! link Number           Constant
+    highlight! link PmenuThumb       PmenuSel
+    highlight! link PreProc          Identifier
+    highlight! link Question         ModeMsg
+    highlight! link QuickFixLine     Underlined
+    highlight! link StatusLineTerm   StatusLine
+    highlight! link StatusLineTermNC StatusLineNC
+    highlight! link TabLine          StatusLineNC
+    highlight! link TabLineFill      StatusLineNC
+    highlight! link TabLineSel       StatusLine
+    highlight! link Terminal         Normal
+    highlight! link Title            Ignore
+    highlight! link Type             Function
+    highlight! link WarningMsg       Error
+    highlight! link WildMenu         Visual
+    highlight! link helpLeadBlank    Normal
+    highlight! link helpNormal       Normal
 endif
-
-" Set linked groups. {{{1
-
-hi! link ColorColumn CursorLine
-hi! link EndOfBuffer Normal
-hi! link Conceal Special
-hi! link CursorColumn CursorLine
-hi! link CursorIM Cursor
-hi! link MatchParen PmenuSel
-hi! link Number Constant
-hi! link PmenuSbar Pmenu
-hi! link PreProc Identifier
-hi! link Question ModeMsg
-hi! link QuickFixLine Underlined
-hi! link StatusLineTerm StatusLine
-hi! link StatusLineTermNC StatusLineNC
-hi! link TabLine StatusLineNC
-hi! link TabLineFill StatusLineNC
-hi! link TabLineSel StatusLine
-hi! link Terminal Normal
-hi! link Title Ignore
-hi! link Type Function
-hi! link WarningMsg Error
-hi! link helpLeadBlank Normal
-hi! link helpNormal Normal
 
 " Set terminal colors. {{{1
 
