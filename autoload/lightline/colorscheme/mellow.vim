@@ -70,9 +70,9 @@ else
     let s:p.visual.left = [[ s:bryellow, s:orange, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
     let s:p.visual.right = [[ s:bryellow, s:orange, 'bold' ],[ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
 
-    let s:p.inactive.left = [[ s:grey, s:yellow, 'bold' ], [ s:grey, s:yellow ]]
+    let s:p.inactive.left = [[ s:grey, s:yellow ], [ s:grey, s:yellow ]]
     let s:p.inactive.middle = [[ s:grey, s:yellow ], [ s:grey, s:yellow ]]
-    let s:p.inactive.right = [[ s:grey, s:yellow , 'bold' ], [ s:grey, s:yellow ]]
+    let s:p.inactive.right = [[ s:grey, s:yellow ], [ s:grey, s:yellow ]]
 
     let s:p.replace.left = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
     let s:p.replace.right = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
