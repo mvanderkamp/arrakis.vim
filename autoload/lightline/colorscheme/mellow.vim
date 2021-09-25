@@ -55,27 +55,27 @@ if lightline#colorscheme#background() ==# 'light'
     let s:p.tabline.right = [[ s:bryellow, s:red, 'bold' ]]
     let s:p.tabline.tabsel = [[ s:black, s:lime ]]
 else
-    let s:p.normal.left = [[ s:bryellow, s:burgundy, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
-    let s:p.normal.right = [[ s:bryellow, s:burgundy, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
-    let s:p.normal.middle = [[ s:bryellow, s:yellow ]]
+    let s:p.normal.left = [[ s:bryellow, s:burgundy, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
+    let s:p.normal.right = [[ s:bryellow, s:burgundy, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
+    let s:p.normal.middle = [[ s:grey, s:yellow ]]
     let s:p.normal.error = [[ s:red, s:yellow ]]
     let s:p.normal.warning = [[ s:orange, s:yellow ]]
 
-    let s:p.command.left = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
-    let s:p.command.right = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
+    let s:p.command.left = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
+    let s:p.command.right = [[ s:brown, s:lime, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
 
-    let s:p.insert.left = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
-    let s:p.insert.right = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
+    let s:p.insert.left = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
+    let s:p.insert.right = [[ s:bryellow, s:green, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
 
-    let s:p.visual.left = [[ s:bryellow, s:orange, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
-    let s:p.visual.right = [[ s:bryellow, s:orange, 'bold' ],[ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
+    let s:p.visual.left = [[ s:bryellow, s:orange, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
+    let s:p.visual.right = [[ s:bryellow, s:orange, 'bold' ],[ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
 
-    let s:p.inactive.left = [[ s:bryellow, s:yellow, 'bold' ], [ s:bryellow, s:yellow ]]
-    let s:p.inactive.middle = [[ s:bryellow, s:yellow ], [ s:bryellow, s:yellow ]]
-    let s:p.inactive.right = [[ s:bryellow, s:yellow , 'bold' ], [ s:bryellow, s:yellow ]]
+    let s:p.inactive.left = [[ s:grey, s:yellow, 'bold' ], [ s:grey, s:yellow ]]
+    let s:p.inactive.middle = [[ s:grey, s:yellow ], [ s:grey, s:yellow ]]
+    let s:p.inactive.right = [[ s:grey, s:yellow , 'bold' ], [ s:grey, s:yellow ]]
 
-    let s:p.replace.left = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
-    let s:p.replace.right = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:bryellow, s:yellow ]]
+    let s:p.replace.left = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
+    let s:p.replace.right = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:grey, s:yellow ]]
 
     let s:p.tabline.left = [[ s:bryellow, s:green, 'bold' ]]
     let s:p.tabline.right = [[ s:bryellow, s:red, 'bold' ]]
