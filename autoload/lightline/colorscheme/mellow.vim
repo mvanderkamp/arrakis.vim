@@ -44,9 +44,9 @@ if lightline#colorscheme#background() ==# 'light'
     let s:p.visual.left = [[ s:bryellow, s:orange, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
     let s:p.visual.right = [[ s:bryellow, s:orange, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
 
-    let s:p.inactive.left = [[ s:yellow, s:bryellow, 'bold' ], [ s:yellow, s:bryellow ]]
+    let s:p.inactive.left = [[ s:yellow, s:bryellow ], [ s:yellow, s:bryellow ]]
     let s:p.inactive.middle = [[ s:yellow, s:bryellow ], [ s:yellow, s:bryellow ]]
-    let s:p.inactive.right = [[ s:yellow, s:bryellow , 'bold' ], [ s:yellow, s:bryellow ]]
+    let s:p.inactive.right = [[ s:yellow, s:bryellow ], [ s:yellow, s:bryellow ]]
 
     let s:p.replace.left = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
     let s:p.replace.right = [[ s:bryellow, s:red, 'bold' ], [ s:bryellow, s:blue ], [ s:burgundy, s:bryellow ]]
