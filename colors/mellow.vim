@@ -30,9 +30,6 @@ let s:opt_terminal_colors = get(g:, s:script_name .. '_terminal_colors', 1)
 " By default, DO NOT define User1-9 colors for statusline.
 let s:opt_user_colors = get(g:, s:script_name .. '_user_colors', 0)
 
-" By default, DO NOT use ANSI colors as a fallback (uses 256 colors instead).
-let s:opt_cterm_ansi = get(g:, s:script_name .. '_cterm_ansi', 0)
-
 " Define color palette. {{{1
 
 let s:colors = [
@@ -54,39 +51,16 @@ let s:colors = [
             \ '#F2DDBC',
             \]
 
-" xterm-256 conversions: https://codegolf.stackexchange.com/a/156985
-let s:colors_fallback = s:opt_cterm_ansi ? range(16) : [
-            \ 232,
-            \ 124,
-            \ 22,
-            \ 95,
-            \ 53,
-            \ 52,
-            \ 166,
-            \ 187,
-            \ 235,
-            \ 210,
-            \ 148,
-            \ 216,
-            \ 188,
-            \ 138,
-            \ 172,
-            \ 223,
-            \ ]
-
 " Define highlight setter function. {{{1
 
 function! s:hi(group, bg, fg, ...) abort
     " Parse bg and fg strings, e.g. 'NONE', or integers in the range [0,15].
     let l:guibg = type(a:bg) == type('') ? a:bg : s:colors[a:bg]
     let l:guifg = type(a:fg) == type('') ? a:fg : s:colors[a:fg]
-    " Set cterm fallback colors.
-    let l:ctermbg = type(a:bg) == type('') ? a:bg : s:colors_fallback[a:bg]
-    let l:ctermfg = type(a:fg) == type('') ? a:fg : s:colors_fallback[a:fg]
 
     let l:colors = printf(
-                \ 'hi %s ctermbg=%s guibg=%s ctermfg=%s guifg=%s',
-                \ a:group, l:ctermbg, l:guibg, l:ctermfg, l:guifg
+                \ 'highlight %s ctermbg=%s guibg=%s ctermfg=%s guifg=%s',
+                \ a:group, a:bg, l:guibg, a:fg, l:guifg
                 \)
 
     " By default, set special attributes to 'NONE'.
