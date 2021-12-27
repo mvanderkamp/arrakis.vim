@@ -27,9 +27,6 @@ let g:colors_name = s:script_name
 " By default, DO define colors for :terminal.
 let s:opt_terminal_colors = get(g:, s:script_name .. '_terminal_colors', 1)
 
-" By default, DO NOT define User1-9 colors for statusline.
-let s:opt_user_colors = get(g:, s:script_name .. '_user_colors', 0)
-
 " Define color palette. {{{1
 
 let s:colors = [
@@ -233,41 +230,5 @@ if s:opt_terminal_colors
     endif
 endif
 
-" Set optional statusline groups, see :h hl-User1 {{{1
-
-if s:opt_user_colors
-    if &background ==# 'light'
-        " Colors for statusline diagnostics: red (1) and green (2).
-        exe s:hi('default User1',   11, 1,  'bold')
-        exe s:hi('default User2',   11, 2,  'bold')
-        " Subtle colors for miscellaneous indicators: sand (3) and orange (4).
-        exe s:hi('default User3',   11, 13)
-        exe s:hi('default User4',   11, 14)
-        " Inverse colors for mode indicators:
-        " cordovan (5), green (6), orange (7), red (8) and blue (9)
-        exe s:hi('default User5',   13, 11, 'bold')
-        exe s:hi('default User6',   2,  11, 'bold')
-        exe s:hi('default User7',   14, 11, 'bold')
-        exe s:hi('default User8',   1,  11, 'bold')
-        exe s:hi('default User9',   4,  11, 'bold')
-
-    else
-        " Colors for statusline diagnostics: red (1) and green (2).
-        exe s:hi('default User1',   5,  9,  'bold')
-        exe s:hi('default User2',   5,  10, 'bold')
-        " Subtle colors for miscellaneous indicators: sand (3) and orange (4).
-        exe s:hi('default User3',   5,  13)
-        exe s:hi('default User4',   5,  14)
-        " Inverse colors for mode indicators:
-        " cordovan (5), green (6), orange (7), red (8) and blue (9)
-        exe s:hi('default User5',   13, 11, 'bold')
-        exe s:hi('default User6',   2,  11, 'bold')
-        exe s:hi('default User7',   6,  11, 'bold')
-        exe s:hi('default User8',   1,  11, 'bold')
-        exe s:hi('default User9',   4,  11, 'bold')
-    endif
-endif
-
-" }}}
 
 " vim: fdm=marker
