@@ -1,20 +1,19 @@
-"  __  __      _ _
-" |  \/  | ___| | | _____      __
-" | |\/| |/ _ \ | |/ _ \ \ /\ / /
-" | |  | |  __/ | | (_) \ V  V /
-" |_|  |_|\___|_|_|\___/ \_/\_/
+"   _________  _________  ___
+"  / ___/ __ \/ ___/ __ \/ _ |
+" / /__/ /_/ / /__/ /_/ / __ |
+" \___/\____/\___/\____/_/ |_|
 "
-" Maintainer: adigitoleo <adigitoleo@protonmail.com>
-" Version: 1.2.1
-" Description: A warm, minimalist colorscheme for (neo)vim
-" Homepage: https://github.com/adigitoleo/vim-mellow
+" Maintainer: mvanderkamp
+" Version: 1.0.0
+" Description: A smooth chocolatey colourscheme for vim
+" Homepage: https://github.com/mvanderkamp/cocoa.vim
 
 
 let s:script_name = expand('<sfile>:t:r')
 
 " Clear highlights and set options. {{{1
 
-hi clear
+highlight clear
 
 if v:version > 580
     if exists('g:syntax_on')

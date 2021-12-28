@@ -1,5 +1,5 @@
-" Lightline themes for Mellow:
-" <https://github.com/adigitoleo/vim-mellow>
+" Lightline themes for Cocoa:
+" https://github.com/mvanderkamp/cocoa.vim
 
 let s:p = {
             \ 'normal': {},
@@ -82,13 +82,13 @@ else
     let s:p.tabline.tabsel = [[ s:black, s:lime ]]
 endif
 
-let g:lightline#colorscheme#mellow#palette = lightline#colorscheme#flatten(s:p)
+let g:lightline#colorscheme#cocoa#palette = lightline#colorscheme#flatten(s:p)
 
 " See https://github.com/itchyny/lightline.vim/issues/424#issuecomment-590058820
-augroup MellowLightlineAutocmd
+augroup CocoaLightlineAutocmd
     autocmd!
     autocmd OptionSet background
-        \ runtime autoload/lightline/colorscheme/mellow.vim
+        \ runtime autoload/lightline/colorscheme/cocoa.vim
         \ | call lightline#colorscheme()
         \ | call lightline#update()
 augroup END
