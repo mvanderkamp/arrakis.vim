@@ -11,21 +11,21 @@ let s:p = {
             \ 'command': {},
             \}
 
-let s:black    = ['#0F0908', 00]
+let s:black    = ['#321918', 00]
 let s:red      = ['#97001A', 01]
-let s:green    = ['#3C5E15', 02]
-let s:yellow   = ['#865448', 03]
+let s:green    = ['#305B12', 02]
+let s:yellow   = ['#7C493E', 03]
 let s:blue     = ['#573E55', 04]
 let s:burgundy = ['#66292F', 05]
 let s:orange   = ['#BF472C', 06]
 let s:grey     = ['#E0CCAE', 07]
-let s:brown    = ['#2D140F', 08]
-let s:pink     = ['#FF9487', 09]
-let s:lime     = ['#A4BF40', 10]
+let s:brown    = ['#4D241F', 08]
+let s:pink     = ['#FF947C', 09]
+let s:lime     = ['#CACF56', 10]
 let s:bryellow = ['#F5BB89', 11]
-let s:skyblue  = ['#CFCAD0', 12]
-let s:cordovan = ['#BA8B93', 13]
-let s:brorange = ['#D47D49', 14]
+let s:skyblue  = ['#E2CCCD', 12]
+let s:cordovan = ['#CF9D7E', 13]
+let s:brorange = ['#E08F44', 14]
 let s:white    = ['#F2DDBC', 15]
 
 if lightline#colorscheme#background() ==# 'light'
