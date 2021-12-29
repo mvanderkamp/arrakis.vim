@@ -10,7 +10,7 @@ Forked from https://github.com/adigitoleo/vim-mellow
 A key design goal in this colourscheme is to make sure that all the dark
 colours are comfortably legible as the foreground over any of the light colours
 as a background, and vice versa. This allows setting the background for
-highlights such as a Search, Visual, or DiffDelete without worrying about the
+highlights such as a Search, Visual, or DiffText without worrying about the
 foreground- any of the foreground colours will still work. Syntax highlighting
 can therefore be preserved whenever adding a background highlight to text!
 
