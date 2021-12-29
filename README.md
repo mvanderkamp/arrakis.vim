@@ -1,6 +1,8 @@
 # Cocoa
 A smooth chocolatey colourscheme for vim
 
+![Highlighting Sample](https://raw.githubusercontent.com/wiki/mvanderkamp/cocoa.vim/images/cocoa_sample.png)
+
 Forked from https://github.com/adigitoleo/vim-mellow
 
 ## Design
@@ -12,7 +14,8 @@ highlights such as a Search, Visual, or DiffDelete without worrying about the
 foreground- any of the foreground colours will still work. Syntax highlighting
 can therefore be preserved whenever adding a background highlight to text!
 
-See https://github.com/mvanderkamp/sixteen-colour-table
+![Sixteen Colour Table](https://raw.githubusercontent.com/wiki/mvanderkamp/cocoa.vim/images/cocoa.png)
+<sub>Made with https://github.com/mvanderkamp/sixteen-colour-table</sub>
 
 ## Installation
 
