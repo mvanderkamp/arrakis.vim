@@ -15,7 +15,8 @@ foreground- any of the foreground colours will still work. Syntax highlighting
 can therefore be preserved whenever adding a background highlight to text!
 
 ![Sixteen Colour Table](https://raw.githubusercontent.com/wiki/mvanderkamp/cocoa.vim/images/cocoa.png)
-<sub>Made with https://github.com/mvanderkamp/sixteen-colour-table</sub>
+
+<sub>Table made using https://github.com/mvanderkamp/sixteen-colour-table</sub>
 
 ## Installation
 
