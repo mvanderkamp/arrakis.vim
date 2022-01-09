@@ -29,21 +29,21 @@ let s:opt_terminal_colors = get(g:, s:script_name .. '_terminal_colors', 1)
 " Define color palette. {{{1
 
 let s:colors = [
-            \ '#321918',
+            \ '#280F0E',
             \ '#97001A',
             \ '#305B12',
             \ '#7C493E',
             \ '#573E55',
             \ '#66292F',
-            \ '#BF472C',
+            \ '#AF3F1C',
             \ '#E0CCAE',
-            \ '#4D241F',
+            \ '#471E19',
             \ '#FF947C',
             \ '#CACF56',
             \ '#F5BB89',
             \ '#E2CCCD',
-            \ '#CF9D7E',
-            \ '#E08F44',
+            \ '#D6AE91',
+            \ '#F09F54',
             \ '#F2DDBC',
             \ ]
 
