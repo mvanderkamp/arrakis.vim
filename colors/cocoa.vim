@@ -4,7 +4,7 @@
 " \___/\____/\___/\____/_/ |_|
 "
 " Maintainer: mvanderkamp
-" Version: 1.0.0
+" Version: 2.0.0
 " Description: A smooth chocolatey colourscheme for vim
 " Homepage: https://github.com/mvanderkamp/cocoa.vim
 
