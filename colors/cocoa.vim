@@ -82,7 +82,6 @@ if &background ==# 'light'
     exe s:hi('Comment',         15,         2)
     exe s:hi('Constant',        15,         6)
     exe s:hi('CursorLine',      7,          'NONE')
-    exe s:hi('CursorLineNr',    11,         5)
     exe s:hi('DiffAdd',         10,         'NONE')
     exe s:hi('DiffChange',      13,         'NONE')
     exe s:hi('DiffDelete',      15,         12,         'bold')
@@ -93,7 +92,7 @@ if &background ==# 'light'
     exe s:hi('Folded',          7,          5)
     exe s:hi('FoldColumn',      14,         6)
     exe s:hi('Function',        15,         5)
-    exe s:hi('Identifier',      15,         5)
+    exe s:hi('Identifier',      15,         4)
     exe s:hi('Ignore',          15,         'NONE')
     exe s:hi('IncSearch',       10,         'NONE',     'underline')
     exe s:hi('LineNr',          7,          3)
@@ -101,7 +100,6 @@ if &background ==# 'light'
     exe s:hi('MoreMsg',         3,          15,         'bold,reverse')
     exe s:hi('NonText',         15,         10)
     exe s:hi('Normal',          15,         0)
-    exe s:hi('Pmenu',           11,         0)
     exe s:hi('PmenuSel',        10,         8)
     exe s:hi('PmenuSbar',       3,          8)
     exe s:hi('Search',          12,         'NONE')
@@ -115,7 +113,6 @@ if &background ==# 'light'
     exe s:hi('Statement',       15,         1)
     exe s:hi('StatusLine',      11,         5)
     exe s:hi('StatusLineNC',    11,         3,          'underline')
-    exe s:hi('String',          15,         8)
     exe s:hi('Todo',            10,         8,          'bold')
     exe s:hi('Underlined',      15,         'NONE',     'underline')
     exe s:hi('VertSplit',       11,         6)
@@ -126,7 +123,6 @@ else
     exe s:hi('Comment',         0,          10)
     exe s:hi('Constant',        0,          14)
     exe s:hi('CursorLine',      8,          'NONE')
-    exe s:hi('CursorLineNr',    3,          11,         'bold')
     exe s:hi('DiffAdd',         2,          'NONE')
     exe s:hi('DiffChange',      5,          'NONE')
     exe s:hi('DiffDelete',      0,          4,          'bold')
@@ -137,7 +133,7 @@ else
     exe s:hi('Folded',          8,          13)
     exe s:hi('FoldColumn',      6,          14)
     exe s:hi('Function',        0,          13)
-    exe s:hi('Identifier',      0,          13,         'bold')
+    exe s:hi('Identifier',      0,          12)
     exe s:hi('Ignore',          0,          'NONE')
     exe s:hi('IncSearch',       2,          'NONE',     'underline')
     exe s:hi('LineNr',          8,          11)
@@ -145,7 +141,6 @@ else
     exe s:hi('MoreMsg',         0,          5,          'bold')
     exe s:hi('NonText',         0,          2)
     exe s:hi('Normal',          0,          15)
-    exe s:hi('Pmenu',           3,          15)
     exe s:hi('PmenuSel',        2,          7)
     exe s:hi('PmenuSbar',       13,         7)
     exe s:hi('Search',          4,          'NONE')
@@ -159,7 +154,6 @@ else
     exe s:hi('Statement',       0,          9)
     exe s:hi('StatusLine',      3,          11)
     exe s:hi('StatusLineNC',    3,          11,         'underline')
-    exe s:hi('String',          0,          7)
     exe s:hi('Todo',            2,          11,         'bold')
     exe s:hi('Underlined',      0,          'NONE',     'underline')
     exe s:hi('VertSplit',       3,          5)
@@ -171,15 +165,18 @@ highlight! link ColorColumn      CursorLine
 highlight! link Conceal          Special
 highlight! link CursorColumn     CursorLine
 highlight! link CursorIM         Cursor
+highlight! link CursorLineNr     StatusLine
 highlight! link EndOfBuffer      Normal
 highlight! link MatchParen       PmenuSel
 highlight! link Number           Constant
+highlight! link Pmenu            DiffChange
 highlight! link PmenuThumb       PmenuSel
 highlight! link PreProc          Identifier
 highlight! link Question         ModeMsg
 highlight! link QuickFixLine     Underlined
 highlight! link StatusLineTerm   StatusLine
 highlight! link StatusLineTermNC StatusLineNC
+highlight! link String           Constant
 highlight! link TabLine          StatusLineNC
 highlight! link TabLineFill      StatusLineNC
 highlight! link TabLineSel       StatusLine
