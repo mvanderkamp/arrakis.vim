@@ -115,7 +115,6 @@ if &background ==# 'light'
     exe s:hi('Statement',       15,         1)
     exe s:hi('StatusLine',      11,         5)
     exe s:hi('StatusLineNC',    11,         3,          'underline')
-    exe s:hi('String',          15,         8)
     exe s:hi('Todo',            10,         8,          'bold')
     exe s:hi('Underlined',      15,         'NONE',     'underline')
     exe s:hi('VertSplit',       11,         6)
@@ -159,7 +158,6 @@ else
     exe s:hi('Statement',       0,          9)
     exe s:hi('StatusLine',      3,          11)
     exe s:hi('StatusLineNC',    3,          11,         'underline')
-    exe s:hi('String',          0,          7)
     exe s:hi('Todo',            2,          11,         'bold')
     exe s:hi('Underlined',      0,          'NONE',     'underline')
     exe s:hi('VertSplit',       3,          5)
@@ -180,6 +178,7 @@ highlight! link Question         ModeMsg
 highlight! link QuickFixLine     Underlined
 highlight! link StatusLineTerm   StatusLine
 highlight! link StatusLineTermNC StatusLineNC
+highlight! link String           Constant
 highlight! link TabLine          StatusLineNC
 highlight! link TabLineFill      StatusLineNC
 highlight! link TabLineSel       StatusLine
