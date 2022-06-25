@@ -101,7 +101,6 @@ if &background ==# 'light'
     exe s:hi('MoreMsg',         3,          15,         'bold,reverse')
     exe s:hi('NonText',         15,         10)
     exe s:hi('Normal',          15,         0)
-    exe s:hi('Pmenu',           11,         0)
     exe s:hi('PmenuSel',        10,         8)
     exe s:hi('PmenuSbar',       3,          8)
     exe s:hi('Search',          12,         'NONE')
@@ -144,7 +143,6 @@ else
     exe s:hi('MoreMsg',         0,          5,          'bold')
     exe s:hi('NonText',         0,          2)
     exe s:hi('Normal',          0,          15)
-    exe s:hi('Pmenu',           3,          15)
     exe s:hi('PmenuSel',        2,          7)
     exe s:hi('PmenuSbar',       13,         7)
     exe s:hi('Search',          4,          'NONE')
@@ -172,6 +170,7 @@ highlight! link CursorIM         Cursor
 highlight! link EndOfBuffer      Normal
 highlight! link MatchParen       PmenuSel
 highlight! link Number           Constant
+highlight! link Pmenu            DiffChange
 highlight! link PmenuThumb       PmenuSel
 highlight! link PreProc          Identifier
 highlight! link Question         ModeMsg
