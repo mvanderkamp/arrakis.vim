@@ -21,10 +21,8 @@ if v:version > 580
     endif
 endif
 
+" Used by vim internally
 let g:colors_name = s:script_name
-
-" By default, DO define colors for :terminal.
-let s:opt_terminal_colors = get(g:, s:script_name .. '_terminal_colors', 1)
 
 " Define color palette. {{{1
 
@@ -189,6 +187,9 @@ highlight! link helpLeadBlank    Normal
 highlight! link helpNormal       Normal
 
 " Set terminal colors. {{{1
+
+" By default, DO define colors for :terminal.
+let s:opt_terminal_colors = get(g:, s:script_name .. '_terminal_colors', 1)
 
 if s:opt_terminal_colors
     if has('nvim')
