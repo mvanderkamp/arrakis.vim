@@ -62,7 +62,7 @@ before opening an issue.
 
 **Use Cocoa colour palette in the embedded terminal:**
 - enabled (`1`) by default if your (neo)vim has the terminal feature
-- `:let g:cocoa = 0` to disable
+- `:let g:cocoa_terminal_colors = 0` to disable
 
 *NOTE: Colors in existing `:terminal` buffers are NOT re-drawn when
 changing `set background`. You will need to kill and restart any `:terminal`s
