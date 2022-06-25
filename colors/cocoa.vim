@@ -82,7 +82,6 @@ if &background ==# 'light'
     exe s:hi('Comment',         15,         2)
     exe s:hi('Constant',        15,         6)
     exe s:hi('CursorLine',      7,          'NONE')
-    exe s:hi('CursorLineNr',    11,         5)
     exe s:hi('DiffAdd',         10,         'NONE')
     exe s:hi('DiffChange',      13,         'NONE')
     exe s:hi('DiffDelete',      15,         12,         'bold')
@@ -124,7 +123,6 @@ else
     exe s:hi('Comment',         0,          10)
     exe s:hi('Constant',        0,          14)
     exe s:hi('CursorLine',      8,          'NONE')
-    exe s:hi('CursorLineNr',    3,          11,         'bold')
     exe s:hi('DiffAdd',         2,          'NONE')
     exe s:hi('DiffChange',      5,          'NONE')
     exe s:hi('DiffDelete',      0,          4,          'bold')
@@ -167,6 +165,7 @@ highlight! link ColorColumn      CursorLine
 highlight! link Conceal          Special
 highlight! link CursorColumn     CursorLine
 highlight! link CursorIM         Cursor
+highlight! link CursorLineNr     StatusLine
 highlight! link EndOfBuffer      Normal
 highlight! link MatchParen       PmenuSel
 highlight! link Number           Constant
